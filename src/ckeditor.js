@@ -44,10 +44,16 @@ export class DecoupledEditor extends DecoupledEditorBase { }
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
 	Essentials,
+	Alignment,
+	FontSize,
+	FontFamily,
+	Highlight,
 	UploadAdapter,
 	Autoformat,
 	Bold,
 	Italic,
+	Strikethrough,
+	Underline,
 	BlockQuote,
 	CKFinder,
 	EasyImage,
@@ -57,6 +63,8 @@ ClassicEditor.builtinPlugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
+	Indent,
+	IndentBlock,
 	Link,
 	List,
 	MediaEmbed,
@@ -73,23 +81,42 @@ ClassicEditor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
+			'fontsize',
+			'fontfamily',
+			'|',
 			'bold',
 			'italic',
-			'link',
-			'bulletedList',
+			'underline',
+			'strikethrough',
+			'highlight',
+			'|',
+			'alignment',
+			'|',
 			'numberedList',
+			'bulletedList',
+			'|',
+			'indent',
+			'outdent',
+			'|',
+			'link',
+			'blockquote',
 			'imageUpload',
-			'blockQuote',
 			'insertTable',
-			'mediaEmbed',
+			'|',
 			'undo',
 			'redo'
 		]
 	},
 	image: {
+		styles: [
+			'full',
+			'alignLeft',
+			'alignRight'
+		],
 		toolbar: [
+			'imageStyle:alignLeft',
 			'imageStyle:full',
-			'imageStyle:side',
+			'imageStyle:alignRight',
 			'|',
 			'imageTextAlternative'
 		]
