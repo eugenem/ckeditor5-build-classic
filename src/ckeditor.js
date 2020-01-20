@@ -29,6 +29,14 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Mention from '@ckeditor/ckeditor5-mention/src/mention';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
+import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
+import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Indent from '@ckeditor/ckeditor5-indent/src/indent';
+import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 
 export class ClassicEditor extends ClassicEditorBase { }
 export class DecoupledEditor extends DecoupledEditorBase { }
@@ -99,95 +107,95 @@ ClassicEditor.defaultConfig = {
 
 // Plugins to include in the build.
 DecoupledEditor.builtinPlugins = [
-  Essentials,
-  Alignment,
-  FontSize,
-  FontFamily,
-  Highlight,
-  UploadAdapter,
-  Autoformat,
-  Bold,
-  Italic,
-  Strikethrough,
-  Underline,
-  BlockQuote,
-  CKFinder,
-  EasyImage,
-  Heading,
-  Image,
-  ImageCaption,
-  ImageStyle,
-  ImageToolbar,
-  ImageUpload,
-  Indent,
-  IndentBlock,
-  Link,
-  List,
-  MediaEmbed,
-  Paragraph,
-  PasteFromOffice,
-  Table,
-  TableToolbar
+	Essentials,
+	Alignment,
+	FontSize,
+	FontFamily,
+	Highlight,
+	UploadAdapter,
+	Autoformat,
+	Bold,
+	Italic,
+	Strikethrough,
+	Underline,
+	BlockQuote,
+	CKFinder,
+	EasyImage,
+	Heading,
+	Image,
+	ImageCaption,
+	ImageStyle,
+	ImageToolbar,
+	ImageUpload,
+	Indent,
+	IndentBlock,
+	Link,
+	List,
+	MediaEmbed,
+	Paragraph,
+	PasteFromOffice,
+	Table,
+	TableToolbar
 ];
 
 // Editor configuration.
 DecoupledEditor.defaultConfig = {
-  toolbar: {
-	items: [
-	  'heading',
-	  '|',
-	  'fontsize',
-	  'fontfamily',
-	  '|',
-	  'bold',
-	  'italic',
-	  'underline',
-	  'strikethrough',
-	  'highlight',
-	  '|',
-	  'alignment',
-	  '|',
-	  'numberedList',
-	  'bulletedList',
-	  '|',
-	  'indent',
-	  'outdent',
-	  '|',
-	  'link',
-	  'blockquote',
-	  'imageUpload',
-	  'insertTable',
-	  'mediaEmbed',
-	  '|',
-	  'undo',
-	  'redo'
-	]
-  },
-  image: {
-	styles: [
-	  'full',
-	  'alignLeft',
-	  'alignRight'
-	],
-	toolbar: [
-	  'imageStyle:alignLeft',
-	  'imageStyle:full',
-	  'imageStyle:alignRight',
-	  '|',
-	  'imageTextAlternative'
-	]
-  },
-  table: {
-	contentToolbar: [
-	  'tableColumn',
-	  'tableRow',
-	  'mergeTableCells'
-	]
-  },
-  // This value must be kept in sync with the language defined in webpack.config.js.
-  language: 'en'
+	toolbar: {
+		items: [
+			'heading',
+			'|',
+			'fontsize',
+			'fontfamily',
+			'|',
+			'bold',
+			'italic',
+			'underline',
+			'strikethrough',
+			'highlight',
+			'|',
+			'alignment',
+			'|',
+			'numberedList',
+			'bulletedList',
+			'|',
+			'indent',
+			'outdent',
+			'|',
+			'link',
+			'blockquote',
+			'imageUpload',
+			'insertTable',
+			'mediaEmbed',
+			'|',
+			'undo',
+			'redo'
+		]
+	},
+	image: {
+		styles: [
+			'full',
+			'alignLeft',
+			'alignRight'
+		],
+		toolbar: [
+			'imageStyle:alignLeft',
+			'imageStyle:full',
+			'imageStyle:alignRight',
+			'|',
+			'imageTextAlternative'
+		]
+	},
+	table: {
+		contentToolbar: [
+			'tableColumn',
+			'tableRow',
+			'mergeTableCells'
+		]
+	},
+	// This value must be kept in sync with the language defined in webpack.config.js.
+	language: 'en'
 };
 
 export default {
-  ClassicEditor, DecoupledEditor
+	ClassicEditor, DecoupledEditor
 };
