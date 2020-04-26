@@ -37,6 +37,8 @@ import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
+import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
+import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
 
 export class ClassicEditor extends ClassicEditorBase { }
 export class DecoupledEditor extends DecoupledEditorBase { }
@@ -55,8 +57,6 @@ ClassicEditor.builtinPlugins = [
 	Strikethrough,
 	Underline,
 	BlockQuote,
-	CKFinder,
-	EasyImage,
 	Heading,
 	Image,
 	ImageCaption,
@@ -72,7 +72,9 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	Mention
+  Mention,
+  RemoveFormat,
+  Base64UploadAdapter
 ];
 
 // Editor configuration.
@@ -104,7 +106,9 @@ ClassicEditor.defaultConfig = {
 			'insertTable',
 			'|',
 			'undo',
-			'redo'
+			'redo',
+			'|',
+			'removeFormat'
 		]
 	},
 	image: {
